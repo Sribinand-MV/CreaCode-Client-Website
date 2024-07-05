@@ -1,12 +1,61 @@
 
 AOS.init({
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 900, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  
+  offset: 120, 
+  delay: 0, 
+  duration: 900, 
+ 
+  once: false, 
+  
+});
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var isValid = true;
 
+  var Fname = document.getElementById("Fname").value;
+  var Lname = document.getElementById("Lname").value;
+  var email = document.getElementById("email").value;
+  var Password = document.getElementById("Password").value;
+  var Message = document.getElementById("Message").value;
+
+ 
+  document.getElementById("Fname_error").textContent = "";
+  document.getElementById("Lname_error").textContent = "";
+  document.getElementById("email_error").textContent = "";
+  document.getElementById("Password_error").textContent = "";
+  document.getElementById("Message_error").textContent = "";
+
+  if (Fname.trim() === "") {
+      isValid = false;
+      document.getElementById("Fname_error").textContent = "First name is required";
+  }
+
+  if (Lname.trim() === "") {
+      isValid = false;
+      document.getElementById("Lname_error").textContent = "Last name is required";
+  }
+
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (email.trim() === "") {
+      isValid = false;
+      document.getElementById("email_error").textContent = "Email is required";
+  } else if (!emailPattern.test(email)) {
+      isValid = false;
+      document.getElementById("email_error").textContent = "Invalid email format";
+  }
+
+  if (Password.trim() === "") {
+      isValid = false;
+      document.getElementById("Password_error").textContent = "Password is required";
+  }
+
+  if (Message.trim() === "") {
+      isValid = false;
+      document.getElementById("Message_error").textContent = "Message is required";
+  }
+
+  if (isValid) {
+      alert("Form submitted successfully!");
+
+  }
 });
