@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CreaCode Template</title>
+    <title>CreaCode Client Template</title>
+    <link rel="icon" href="./assets/images/comapny logo.jpg">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
@@ -76,7 +78,7 @@
             </div>
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
-                    <img src="./assets/images/about.jpg" alt="">
+                    <img src="./assets/images/2.png" alt="">
                 </div>
                 <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
                     <h1>About CreaCode</h1>
@@ -246,30 +248,35 @@
                     <div class="section-title">
                         <h1 class="display-4 text-white fw-semibold">Get in touch</h1>
                         <div class="line bg-white"></div>
-                        <p class="text-white">We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                        <p class="text-white">We love to craft digital experiences for brands rather than crap and more lorem ipsums and do crazy skills</p>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
                 <div class="col-lg-8">
-                    <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                    <form class="row g-3 p-lg-5 p-4 bg-white theme-shadow" id="form">
                         <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Enter first name">
+                            <input type="text" class="form-control" id="Fname" placeholder="Enter first name">
+                            <span style="color: red;" id="Fname_error"></span>
                         </div>
                         <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Enter last name">
+                            <input type="text" class="form-control" id="Lname" placeholder="Enter last name">
+                            <span style="color: red;" id="Lname_error"></span>
                         </div>
                         <div class="form-group col-lg-12">
-                            <input type="email" class="form-control" placeholder="Enter Email address">
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email address">
+                            <span style="color: red;" id="email_error"></span>
                         </div>
                         <div class="form-group col-lg-12">
-                            <input type="text" class="form-control" placeholder="Enter subject">
+                            <input type="password" class="form-control" id="Password" placeholder="Enter Password">
+                            <span style="color: red;" id="Password_error"></span>
                         </div>
                         <div class="form-group col-lg-12">
-                            <textarea name="message" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+                            <textarea name="message" rows="5" class="form-control" id="Message" placeholder="Enter Message"></textarea>
+                            <span style="color: red;" id="Message_error"></span>
                         </div>
-                        <div class="form-group col-lg-12 d-grid">
-                            <button class="btn btn-brand">Send Message</button>
+                        <div class="form-group col-lg-12 d-grid" >
+                            <button  style="color: blue;"    type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -338,14 +345,13 @@
         </div>
     </footer>
 
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
+  
+     
+    
 </body>
 
 </html>
